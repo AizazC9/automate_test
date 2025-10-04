@@ -54,11 +54,18 @@ body {
       grid-template-columns: 1fr;
       gap: 3rem;
       margin-bottom: 4rem;
+      text-align: center;
     }
   }
 
   &__left {
     opacity: 0;
+
+    @media (max-width: 968px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__subtitle {
@@ -68,6 +75,10 @@ body {
     letter-spacing: 0.1em;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
+
+    @media (max-width: 420px) {
+      font-size: 0.75rem;
+    }
   }
 
   &__title {
@@ -87,10 +98,20 @@ body {
       max-width: 100%;
     }
 
+    @media (max-width: 420px) {
+      font-size: 1.5rem;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
     &--highlight {
       color: $text-dark;
       position: relative;
       white-space: nowrap;
+
+      @media (max-width: 420px) {
+        white-space: normal;
+      }
     }
   }
 
@@ -99,10 +120,16 @@ body {
     color: $text-gray;
     line-height: 1.75;
     max-width: 90%;
+    text-align: justify;
 
     @media (max-width: 768px) {
       font-size: 0.9375rem;
       max-width: 100%;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 0.8125rem;
+      line-height: 1.5;
     }
   }
 
@@ -124,6 +151,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 1300px) {
+      max-width: 30rem;
+      height: 30rem;
+    }
 
     @media (max-width: 768px) {
       height: 28rem;
@@ -149,35 +181,58 @@ body {
     opacity: 0;
     border-radius: 1rem;
     overflow: hidden;
-    background: transparent;
+    background: none;
     box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
 
     &--burger {
-      bottom: 17%;
+      bottom: 15%;
       left: -10%;
-      width: 18.75rem;
+      max-width: 50%;
       border-radius: 0.625rem;
+      padding: 0;
+      background: transparent !important;
+
+      @media (max-width: 1300px) {
+        left: -8%;
+      }
 
       @media (max-width: 768px) {
-        width: 15rem;
         left: -5%;
         bottom: 5%;
       }
 
+      @media (max-width: 420px) {
+        max-width: 40%;
+        left: 1%;
+      }
+
       .hero__card-img {
-        width: 80%;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
       }
     }
 
     &--delivery {
       bottom: 8%;
-      right: -15%;
+      right: -25%;
       background: none !important;
       box-shadow: 0 0.625rem 2.5rem rgba(0, 0, 0, 0.15);
+
+      @media (max-width: 1300px) {
+        width: 50%;
+        right: -12%;
+      }
 
       @media (max-width: 768px) {
         right: -5%;
         bottom: 5%;
+      }
+
+      @media (max-width: 420px) {
+        right: 5%;
+        max-width: 50%;
       }
 
       .hero__card-img {
@@ -208,6 +263,10 @@ body {
       grid-template-columns: 1fr;
       gap: 2rem;
     }
+
+    @media (max-width: 420px) {
+      gap: 1.5rem;
+    }
   }
 
   &__stat {
@@ -229,6 +288,10 @@ body {
     @media (max-width: 768px) {
       font-size: 3rem;
     }
+
+    @media (max-width: 420px) {
+      font-size: 2rem;
+    }
   }
 
   &__stat-suffix {
@@ -241,6 +304,10 @@ body {
     @media (max-width: 768px) {
       font-size: 3rem;
     }
+
+    @media (max-width: 420px) {
+      font-size: 2rem;
+    }
   }
 
   &__stat-label {
@@ -251,6 +318,10 @@ body {
 
     @media (max-width: 768px) {
       font-size: 0.9375rem;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 0.875rem;
     }
   }
 }
@@ -300,6 +371,7 @@ body {
 
     @media (max-width: 968px) {
       order: 1;
+      text-align: center;
     }
   }
 
@@ -310,6 +382,10 @@ body {
     letter-spacing: 0.1em;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
+
+    @media (max-width: 420px) {
+      font-size: 0.75rem;
+    }
   }
 
   &__title {
@@ -326,15 +402,26 @@ body {
     @media (max-width: 768px) {
       font-size: 2rem;
     }
+
+    @media (max-width: 420px) {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
   }
 
   &__description {
     font-size: 1rem;
     color: $text-gray;
     line-height: 1.75;
+    text-align: justify;
 
     @media (max-width: 768px) {
       font-size: 0.9375rem;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 0.8125rem;
+      line-height: 1.5;
     }
   }
 }
@@ -365,6 +452,7 @@ body {
 
     @media (max-width: 968px) {
       order: 1;
+      text-align: center;
     }
   }
 
@@ -375,6 +463,10 @@ body {
     letter-spacing: 0.1em;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
+
+    @media (max-width: 420px) {
+      font-size: 0.75rem;
+    }
   }
 
   &__title {
@@ -391,15 +483,26 @@ body {
     @media (max-width: 768px) {
       font-size: 2rem;
     }
+
+    @media (max-width: 420px) {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
   }
 
   &__description {
     font-size: 1rem;
     color: $text-gray;
     line-height: 1.75;
+    text-align: justify;
 
     @media (max-width: 768px) {
       font-size: 0.9375rem;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 0.8125rem;
+      line-height: 1.5;
     }
   }
 
@@ -463,6 +566,10 @@ body {
     letter-spacing: 0.1em;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
+
+    @media (max-width: 420px) {
+      font-size: 0.75rem;
+    }
   }
 
   &__title {
@@ -479,6 +586,11 @@ body {
     @media (max-width: 768px) {
       font-size: 2rem;
     }
+
+    @media (max-width: 420px) {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
   }
 
   &__description {
@@ -486,9 +598,15 @@ body {
     color: $text-gray;
     line-height: 1.75;
     margin-bottom: 2rem;
+    text-align: justify;
 
     @media (max-width: 768px) {
       font-size: 0.9375rem;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 0.8125rem;
+      line-height: 1.5;
     }
   }
 
@@ -560,9 +678,14 @@ body {
     font-size: 0.9375rem;
     color: $text-gray;
     line-height: 1.7;
+    text-align: justify;
 
     @media (max-width: 768px) {
       font-size: 0.875rem;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 0.8125rem;
     }
   }
 }
@@ -594,6 +717,10 @@ body {
     letter-spacing: 0.1em;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
+
+    @media (max-width: 420px) {
+      font-size: 0.75rem;
+    }
   }
 
   &__title {
@@ -610,15 +737,24 @@ body {
     @media (max-width: 768px) {
       font-size: 1.875rem;
     }
+
+    @media (max-width: 420px) {
+      font-size: 1.5rem;
+    }
   }
 
   &__description {
     font-size: 1rem;
     color: $text-gray;
     line-height: 1.75;
+    text-align: justify;
 
     @media (max-width: 768px) {
       font-size: 0.9375rem;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 0.8125rem;
     }
   }
 
@@ -679,9 +815,14 @@ body {
     font-size: 0.9375rem;
     color: $text-gray;
     line-height: 1.7;
+    text-align: justify;
 
     @media (max-width: 768px) {
       font-size: 0.875rem;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 0.8125rem;
     }
   }
 }
